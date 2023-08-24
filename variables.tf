@@ -1,4 +1,8 @@
 # VPC Variables
+variable "aws_subnet_cnt" {
+  default = 3
+}
+
 variable "aws_subnets" {
   type    = list
   default = ["eks-subnet-1", "eks-subnet-2", "eks-subnet-3"]
