@@ -1,3 +1,9 @@
+
+variable aws_region {
+  description = "Region to build this Infrastructure"
+  default = "us-east-2"
+}
+
 # VPC Variables
 variable "aws_subnet_cnt" {
   default = 3
