@@ -10,3 +10,6 @@ output "subnet_ids" {
   value = aws_subnet.eks-subnets
 }
 
+output "cidr" {
+  value = cidrsubnet(10.0.0.0/16, 8, 8)
+}
