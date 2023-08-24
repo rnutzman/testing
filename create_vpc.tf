@@ -19,8 +19,6 @@ resource "aws_subnet" "eks-subnets" {
   cidr_block              = lookup(var.aws_subnet_cidr, var.aws_subnets[count.index])
   availability_zone_id    = lookup(var.aws_subnet_az, var.aws_subnets[count.index])
   map_public_ip_on_launch = false
-  enable_dns_hostnames    = false
-  enable_dns_support      = true
 
   tags = {
     Name                              = var.aws_subnets[count.index]
