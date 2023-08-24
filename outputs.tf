@@ -7,6 +7,6 @@ output "subnet_ids" {
   description = "Subnet details"
   #value = aws_subnet.eks-subnets[*].id
   #value = keys({for subnet in aws_subnet.eks-subnets: subnet.id => subnet.cidr_block => subnet.availability_zone})
-  value = keys({for subnet in aws_subnet.eks-subnets: subnet.id => subnet.cidr_block})
+  value = aws_subnet.eks-subnets
 }
 
