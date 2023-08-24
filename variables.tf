@@ -6,7 +6,7 @@ variable aws_region {
 
 # VPC Variables
 variable "aws_subnet_cnt" {
-  default = 3
+  default = 2
 }
 
 variable "aws_subnets" {
