@@ -5,6 +5,6 @@ output "vpc_id" {
 
 output "subnet_ids" {
   description = "Subnet details"
-  value = [ for subnet in aws_subnet.eks-subnets: eks-subnets.name]
+  value = aws_subnet.eks-subnets[*].id]
 }
 
