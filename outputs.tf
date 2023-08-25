@@ -9,7 +9,3 @@ output "subnet_ids" {
   #value = keys({for subnet in aws_subnet.eks-subnets: subnet.id => subnet.cidr_block => subnet.availability_zone})
   value = aws_subnet.eks-subnets
 }
-
-output "cidr" {
-  value = cidrsubnet(10.0.0.0/16, 8, 8)
-}
